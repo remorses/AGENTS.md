@@ -1,0 +1,49 @@
+{
+  "$schema": "https://localhost:7664/holocron.json",
+  "siteId": "01K3X7DQAV7B73309D88E8EC01",
+  "name": "AGENTS.md",
+  "disableEditButton": false,
+  "favicon": {
+    "light": "/favicon.svg",
+    "dark": "/favicon.svg"
+  },
+  "logo": {
+    "light": "/logo/dark.svg",
+    "dark": "/logo/light.svg"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Home",
+        "href": "https://localhost:7664",
+        "icon": "document"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Get Started",
+      "href": "https://localhost:7664/login"
+    }
+  },
+  "footer": {
+    "socials": {
+      "twitter": "https://x.com/__morse",
+      "github": "https://github.com/remorses"
+    },
+    "links": [
+      {
+        "header": "Documentation",
+        "items": [
+          {
+            "label": "Holocron",
+            "href": "https://localhost:7664"
+          }
+        ]
+      }
+    ]
+  },
+  "domains": [
+    "agents.md-3z8uehe7.localhost",
+    "agents.md-3z8uehe7.holocronsites.com"
+  ]
+}
