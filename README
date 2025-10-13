@@ -10,7 +10,7 @@ npm install -g agentsdotmd
 ## Usage
 
 ```bash
-agentsdotmd core.md typescript.md pnpm.md react.md sentry.md vitest.md changelog.md docs-writing.md doppler.md cac.md github.md prisma.md react-router.md shadcn.md tailwind.md lucide.md spiceflow.md vercel-ai-sdk.md playwright.md zod.md stripe.md gitchamber.md
+agentsdotmd core.md typescript.md pnpm.md react.md sentry.md vitest.md changelog.md docs-writing.md doppler.md cac.md github.md prisma.md react-router.md shadcn.md tailwind.md lucide.md spiceflow.md vercel-ai-sdk.md playwright.md zod.md stripe.md gitchamber.md fly.md
 ```
 
 This will generate an `AGENTS.md` file with all the coding guidelines concatenated together.
