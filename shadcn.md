@@ -17,3 +17,7 @@
 this project uses shadcn components placed in the website/src/components/ui folder. never add a new shadcn component yourself by writing code. instead use the shadcn cli installed locally.
 
 try to reuse these available components when you can, for example for buttons, tooltips, scroll areas, etc.
+
+## reusing shadcn components
+
+when creating a new React component or adding jsx before creating your own buttons or other elements first check the files inside `src/components/ui` and `src/components` to see what is already available. So you can reuse things like Button and Tooltip components instead of creating your own.
