@@ -11,6 +11,6 @@ const content = dedent`
   some content
 ```
 
-IMPORTANT: notice that i have at start and end a new line. this is required when using string-dedent.
+IMPORTANT: notice that i have at start and end a new line. this is required when using string-dedent. Also notice npm package `string-dedent` instead of `dedent`.
 
 When creating code snippets alias dedent to variables like html or javascript so that I get syntax highlight in my editor: `const html = dedent`
