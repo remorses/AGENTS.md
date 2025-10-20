@@ -11,3 +11,5 @@ for margin, padding, gaps, widths and heights it is preferable to use multiples 
 4 is equal to 16px which is the default font size of the page. this way every spacing is a multiple of the height and width of a default letter.
 
 user interfaces are mostly text so using the letter width and height as a base unit makes it easier to reason about the layout and sizes.
+
+use grow instead of flex-1.
