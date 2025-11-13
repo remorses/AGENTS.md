@@ -49,10 +49,10 @@ this simply means to always include a check in prisma queries to make sure that 
 
 ```typescript
 const resource = await prisma.resource.findFirst({
-    where: { resourceId, parentResource: { users: { some: { userId } } } },
-})
+  where: { resourceId, parentResource: { users: { some: { userId } } } },
+});
 if (!resource) {
-    throw new AppError(`cannot find resource`)
+  throw new AppError(`cannot find resource`);
 }
 ```
 
@@ -82,3 +82,23 @@ if (!user.subscription) {
     )
 }
 ````
+
+## foreign key constraints
+
+sometimes you will get errors like "Invalid `upsert()` invocation: Foreign key constraint violated on the constraint: `filed1_filed2_fkey`". This can be caused by the following issue
+
+- a field that has a relation to table X is being passed a value where no table X exists for that id. You can fix the issue by making sure that the table exists before doing the create or upsert
+- With upsert, even if the create branch is valid, the update branch can violate the FK.
+
+```ts
+await prisma.child.upsert({
+  where: { id: 1 },
+  create: {
+    parent: { connect: { id: 1 } },
+  },
+  update: {
+    parent: { connect: { id: 9999 } }, // no such parent
+  },
+});
+```
+-
