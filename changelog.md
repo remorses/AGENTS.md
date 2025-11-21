@@ -1,5 +1,11 @@
 # changelog
 
+## 1.1.3
+
+### Patch Changes
+
+- vitest.md instructions update
+
 ## 1.1.2
 
 ### Patch Changes
