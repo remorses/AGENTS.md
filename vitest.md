@@ -2,6 +2,8 @@
 
 do not write new test files unless asked. do not write tests if there is not already a test or describe block for that function or module.
 
+if the inputs for the tests is an array of repetitive fields and long content, generate this input data programmatically instead of hardcoding everything. only hardcode the important parts and generate other repetitive fields in a .map or .reduce
+
 tests should validate complex and non-obvious logic. if a test looks like a placeholder, do not add it.
 
 use vitest to run tests. tests should be run from the current package directory and not root. try using the test script instead of vitest directly. additional vitest flags can be added at the end, like --run to disable watch mode or -u to update snapshots.
