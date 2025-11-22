@@ -1,17 +1,4 @@
-# changelog
-
-## 1.1.3
-
-### Patch Changes
-
-- vitest.md instructions update
-
-## 1.1.2
-
-### Patch Changes
-
-- Header comment in generated AGENTS.md instructing not to edit directly
-- Instructions to create ./MY_AGENTS.md for custom instructions
+# writing changelogs
 
 after you make a change that is noteworthy, add an entry in the CHANGELOG.md file in the root of the package. there are 2 kinds of packages, public and private packages. private packages have a private: true field in package.json, public packages do not and instead have a version field in package.json. public packages are the ones that are published to npm.
 
