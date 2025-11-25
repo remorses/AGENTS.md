@@ -24,3 +24,7 @@ use `git ls-files | tree --fromfile` to see files in the repo. this command will
 if you find code that was not there since the last time you read the file it means the user or another agent edited the file. do not revert the changes that were added. instead keep them and integrate them with your new changes
 
 IMPORTANT: NEVER commit your changes unless clearly and specifically asked to!
+
+## showing me files in zed
+
+you can open files when i ask me "show me the line where ..." using the command `zed path/to/file:line`
