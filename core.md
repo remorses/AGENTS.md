@@ -25,6 +25,6 @@ if you find code that was not there since the last time you read the file it mea
 
 IMPORTANT: NEVER commit your changes unless clearly and specifically asked to!
 
-## showing me files in zed
+## opening me files in zed to show me a specific portion of code
 
-you can open files when i ask me "show me the line where ..." using the command `zed path/to/file:line`
+you can open files when i ask me "open in zed the line where ..." using the command `zed path/to/file:line`
