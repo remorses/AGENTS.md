@@ -7,7 +7,7 @@ ALWAYS give long and descriptive names for the sessions, so other agents know wh
 Run a background task (e.g. Vite dev server) without blocking:
 
 ```bash
-tmux new-session -d -s vite-dev-8034 'cd /path/to/project && npm run dev --port 8034'
+tmux new-session -d -s project-name-vite-dev-port-8034 'cd /path/to/project && npm run dev --port 8034'
 ```
 
 Every time you are about to start a new session, first check if there is one already.
