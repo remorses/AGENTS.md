@@ -18,6 +18,8 @@ List all background tasks (sessions):
 tmux ls
 ```
 
+You can assume sessions that do not have names were not started by you or agents so you can ignore them
+
 Kill a background task:
 
 ```bash
@@ -58,4 +60,3 @@ Example pattern for a coding agent:
    ```bash
    tmux kill-session -t build
    ```
-
