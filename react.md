@@ -49,3 +49,15 @@ zustand is the preferred way to created global React state. put it in files like
 - NEVER add zustand state setter methods. instead use useStore.setState to set state. For example never add a method `setVariable` in the state type. Instead call `setState` directly
 
 - zustand already merges new partial state with the previous state. NEVER DO `useStore.setState({ ...useStore.getInitialState(), ... })` unless for resetting state
+
+## non controlled input components
+
+some components do not have a value prop to set the value via React state. these are called uncontrolled components. Instead they usually let you get the current input value via ref. something like ref.current.value. They usually also have an onChange prop that let you know when the value changes
+
+these usually have a initialValue or defaultValue to programmatically set the initial value of the input
+
+when using these components you SHOULD not track their state via React: instead you should programmatically set their value and read their value via refs in event handlers
+
+tracking uncontrolled inputs via React state means that you will need to add useEffect to programmatically change their value when our state changes. this is an anti pattern. instead you MUST keep in mind the uncontrolled input manages its own state and we interface with it via refs and initialValue prop. 
+
+using React state in these cases is only necessary if you have to show the input value during render. if that is not the case you can just use `inputRef.current.value` instead and set the value via `inputRef.current.value = something`
