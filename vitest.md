@@ -13,7 +13,7 @@ to understand how the code you are writing works, you should add inline snapshot
 > always call `pnpm vitest` or `pnpm test` with `--run` or they will hang forever waiting for changes!
 > ALWAYS read back the test if you use the `-u` option to make sure the inline snapshots are as you expect.
 
-- NEVER writes the snapshots content yourself in `toMatchInlineSnapshot`. instead leave it empty and call `pnpm test -u` to fill in snapshots content.
+- NEVER write the snapshots content yourself in `toMatchInlineSnapshot`. instead leave it as is and call `pnpm test -u` to fill in snapshots content. the first time you call `toMatchInlineSnapshot()` you can leave it empty
 
 - when updating implementation and `toMatchInlineSnapshot` should change, DO NOT remove the inline snapshots yourself, just run `pnpm test -u` instead! This will replace contents of the snapshots without wasting time doing it yourself.
 
