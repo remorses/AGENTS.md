@@ -40,7 +40,7 @@ do something like this for every new element you want to use and not know about,
 
 ## keys
 
-cdm modifier cannot be intercepted in opentui. because parent terminal app will not forward it. instead use alt (named hyper in opentui) or ctrl
+cdm modifier cannot be intercepted in opentui. because parent terminal app will not forward it. instead use alt or ctrl
 
 ## overlapping text in boxes
 
