@@ -47,6 +47,8 @@ cdm modifier cannot be intercepted in opentui. because parent terminal app will 
 
 ## overlapping text in boxes
 
-if you see text elements too close to each other the issues is probably that the content does not fix in the box row so elements shrink and gaps or paddings are no longer respected. 
+if you see text elements too close to each other the issues is probably that the content does not fit in the box row so elements shrink and gaps or paddings are no longer respected. 
 
 to fix this issue add flexShrink={0} to all elements inside the row
+
+this common when using wrapMode none.
