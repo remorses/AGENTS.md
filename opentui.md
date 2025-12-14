@@ -20,9 +20,17 @@ Try to never use useEffect if possible. usually you can move logic directly in e
 
 ## understanding how to use opentui React elements
 
-This is not a plain react project, instead it is a React with opentui renderer, which supports box, group, input, etc
+This is not a plain react project, instead it is a project using opentui renderer, which supports box, group, textarea, etc
 
-To understand how to use these components read other files in the project. try to use the theme.tsx file for colors
+Styles are implemented via Yoga. there is a style prop to pass an object or you can also pass styles using a prop for each style (which is preferred)
+
+Not all CSS and react style props are implemented. Only flexbox one. 
+
+To understand how to use these components read other files in the project. try to use the theme.tsx file for colors.
+
+## text wrapping
+
+text elements wrap by default. to disable this pass wrapMode="none"
 
 
 ## researching opentui patterns
@@ -35,7 +43,7 @@ do something like this for every new element you want to use and not know about,
 
 ## keys
 
-cdm modifier cannot be intercepted in opentui. because parent terminal app will not forward it. instead use alt or ctrl .
+cdm modifier cannot be intercepted in opentui. because parent terminal app will not forward it. instead use alt (named hyper in opentui) or ctrl
 
 ## overlapping text in boxes
 
