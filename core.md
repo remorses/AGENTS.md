@@ -14,6 +14,7 @@ NEVER add comments unless I tell you
 
 always use kebab case for new filenames. never use uppercase letters in filenames
 
+never write temporary files to /tmp. instead write them to a local ./tmp folder instead. make sure it is in .gitignore too
 
 ## see files in the repo
 
