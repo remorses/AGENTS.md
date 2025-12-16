@@ -40,6 +40,7 @@
 
 - if you encounter typescript lint errors for an npm package, read the node_modules/package/\*.d.ts files to understand the typescript types of the package. if you cannot understand them, ask me to help you with it.
 
+- NEVER silently suppress errors in catch {} blocks if they contain more than one function call
 ```ts
 // BAD. DO NOT DO THIS
 let favicon: string | undefined;
