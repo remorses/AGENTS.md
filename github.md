@@ -34,6 +34,7 @@ Error: Request timeout at /api/auth/login
 ```bash
 gh run list # lists latest actions runs
 gh run watch <id> --exit-status # if workflow is in progress, wait for the run to complete. the actions run is finished when this command exits. Set a tiemout of at least 10 minutes when running this command
+gh pr checks --watch --fail-fast # watch for current branch pr ci checks to finish
 gh run view <id> --log-failed | tail -n 300 # read the logs for failed steps in the actions run
 gh run view <id> --log | tail -n 300 # read all logs for a github actions run
 ```

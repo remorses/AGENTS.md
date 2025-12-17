@@ -4,11 +4,9 @@ when summarizing changes at the end of the message, be super short, a few words 
 
 please ask questions and confirm assumptions before generating complex architecture code.
 
-NEVER run commands with & at the end to run them in the background. this is leaky and harmful! instead ask me to run commands in the background if needed.
+NEVER run commands with & at the end to run them in the background. this is leaky and harmful! instead ask me to run commands in the background using tmux if needed.
 
 NEVER commit yourself unless asked to do so. I will commit the code myself.
-
-NEVER add comments unless I tell you
 
 ## files
 
