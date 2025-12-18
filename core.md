@@ -8,6 +8,8 @@ NEVER run commands with & at the end to run them in the background. this is leak
 
 NEVER commit yourself unless asked to do so. I will commit the code myself.
 
+NEVER use git to revert files to previous state if you did not create those files yourself! there can be user changes in files you touched, if you revert those changes the user will be very upset!
+
 ## files
 
 always use kebab case for new filenames. never use uppercase letters in filenames

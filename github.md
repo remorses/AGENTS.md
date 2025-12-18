@@ -1,5 +1,6 @@
 # github
 
+
 you can use the `gh` cli to do operations on github for the current repository. For example: open issues, open PRs, check actions status, read workflow logs, etc.
 
 ## creating issues and pull requests
