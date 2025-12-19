@@ -1,5 +1,8 @@
 # testing
 
+.toMatchInlineSnapshot is the preferred way to write tests. leave them empty the first time, update them with -u. check git diff for the test file every time you update them with -u
+
+
 do not create dumb tests that test nothing. do not write tests if there is not already a test file or describe block for that function or module.
 
 if the inputs for the tests is an array of repetitive fields and long content, generate this input data programmatically instead of hardcoding everything. only hardcode the important parts and generate other repetitive fields in a .map or .reduce
