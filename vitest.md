@@ -2,6 +2,7 @@
 
 .toMatchInlineSnapshot is the preferred way to write tests. leave them empty the first time, update them with -u. check git diff for the test file every time you update them with -u
 
+never use timeouts longer than 5 seconds for expects and other statements timeouts. increase timeouts for tests if required, up to 1 minute
 
 do not create dumb tests that test nothing. do not write tests if there is not already a test file or describe block for that function or module.
 
