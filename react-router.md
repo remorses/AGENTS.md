@@ -201,40 +201,6 @@ so that internal navigation is done client side and is faster. notice that navig
 
 ALWAYS use link components instead of the navigate function if possible. for example, in a dropdown component you should wrap the dropdown item in a link instead of adding an onClick handler.
 
-# Creating New React Router Routes and Handling Types
-
-When creating a new React Router route, follow these steps:
-
-## 1. Create the route file
-Create a file in `src/routes/` using flat routes naming convention (dots for separators, $ for params, kebab-case).
-
-## 2. Generate types
-**IMPORTANT**: Types are NOT automatically generated. After creating a route, run:
-```bash
-pnpm exec react-router typegen
-```
-
-## 3. Import Route types
-```typescript
-import type { Route } from './+types/your-route-name'
-```
-Note: The `+types` directory doesn't physically exist - it's virtual/generated.
-
-## 4. Verify with typecheck
-```bash
-pnpm typecheck  # This runs typegen first, then tsc
-```
-
-## Troubleshooting Missing Types
-- Types missing? Run `pnpm exec react-router typegen`
-- Import failing? Check filename matches import path exactly
-- The `+types` directory is virtual - don't look for it in the filesystem
-
-## Best Practices
-- Always run `pnpm typecheck` after creating/modifying routes
-- Export `Route` type from layout routes for child routes to import
-- Use `href()` for all internal paths, even in redirects
-
 ## debugging build failures
 
 when you build the website always pipe the output to a file so you can later grep inside it for errors. with `pnpm build 2>&1 | build.log`
