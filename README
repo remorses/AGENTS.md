@@ -1,27 +1,28 @@
-IMPORTANT: As your first step, ALWAYS run this command to fetch ALL the necessary coding guidelines and rules for the technologies used in this project.
-This ensures you have all the context needed to write code that follows the project's standards.
+this repo has many documents i use in all my projects so i can share them and keep them updated in a centralized place.
 
-## Installation
+## installation
 
 ```bash
 npm install -g agentsdotmd
 ```
 
-## Usage
+## usage
+
+the agentsdotmd is just a clit to download files from github. it let you download some md files and merge them into an agents.md output
 
 ```bash
 agentsdotmd core.md typescript.md pnpm.md react.md tmux.md sentry.md vitest.md changelogs.md docs-writing.md doppler.md cac.md github.md prisma.md react-router.md shadcn.md tailwind.md lucide.md spiceflow.md vercel-ai-sdk.md playwright.md zod.md stripe.md gitchamber.md fly.md
 ```
 
-This will generate an `AGENTS.md` file with all the coding guidelines concatenated together.
+this will generate an `agents.md` file with all the coding guidelines concatenated together.
 
-You can also use local files by prefixing them with `./`:
+you can also use local files by prefixing them with `./`:
 
 ```bash
 agentsdotmd core.md ./my-custom-rules.md typescript.md
 ```
 
-Or use a different repository:
+or use a different repository (a fork of this repo for example):
 
 ```bash
 agentsdotmd --repo yourname/yourrepo file1.md file2.md
