@@ -41,7 +41,7 @@ path mapping:
 - mac paths like `/Users/...` work directly in orb commands (auto-translated)
 - from inside linux shell, mac files are also accessible at `/mnt/mac/...`
 - files in `/home/morse/` are accessible from mac at `~/OrbStack/<machine>/home/morse/...`
-- files in `/tmp/` are fully isolated in the VM (not accessible from mac)
+- `/tmp/` is a tmpfs (RAM) - isolated from mac, lost on reboot
 
 ## avoiding file pollution
 
@@ -61,4 +61,4 @@ orb bash -c 'cd /tmp/linux-vm-myproject && npm run build'
 orb bash -c 'cd /tmp/linux-vm-myproject && npm test'
 ```
 
-files in `/tmp` are fully isolated in the VM and not accessible from mac.
+`/tmp` is a tmpfs (RAM filesystem) - fully isolated from mac but files are lost on VM reboot.
