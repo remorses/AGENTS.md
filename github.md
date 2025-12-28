@@ -40,6 +40,21 @@ gh run view <id> --log-failed | tail -n 300 # read the logs for failed steps in 
 gh run view <id> --log | tail -n 300 # read all logs for a github actions run
 ```
 
+## responding to PR reviews and comments (gh-pr-review extension)
+
+```bash
+# view reviews and get thread IDs
+gh pr-review review view 42 -R owner/repo --unresolved
+
+# reply to a review comment
+gh pr-review comments reply 42 -R owner/repo \
+  --thread-id PRRT_kwDOAAABbcdEFG12 \
+  --body "Fixed in latest commit"
+
+# resolve a thread
+gh pr-review threads resolve 42 -R owner/repo --thread-id PRRT_kwDOAAABbcdEFG12
+```
+
 ## listing, searching, reading github repos files with gitchamber
 
 you MUST use gitchamber.com to read repo files. first ALWAYS run `curl https://gitchamber.com` to read detailed usage docs. always use curl to fetch the responses of gitchamber.com
