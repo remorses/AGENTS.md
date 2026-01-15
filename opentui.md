@@ -40,7 +40,7 @@ do something like this for every new element you want to use and not know about,
 
 ## keys
 
-cdm modifier (named hyper in opentui) cannot be intercepted in opentui. because parent terminal app will not forward it. instead use alt or ctrl
+cmd modifier (named hyper in opentui) cannot be intercepted in opentui. because parent terminal app will not forward it. instead use alt or ctrl
 
 enter key is named return in opentui. alt is option.
 
