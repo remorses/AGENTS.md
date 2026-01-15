@@ -51,3 +51,7 @@ if you see text elements too close to each other the issues is probably that the
 to fix this issue add flexShrink={0} to all elements inside the row
 
 this common when using wrapMode none.
+
+## flushSync
+
+flushSync is exported by @opentui/react, same for createPortal
