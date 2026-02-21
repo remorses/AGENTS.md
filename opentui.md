@@ -40,7 +40,7 @@ do something like this for every new element you want to use and not know about,
 
 ## keys
 
-cmd modifier (named hyper in opentui) cannot be intercepted in opentui. because parent terminal app will not forward it. instead use alt or ctrl
+cmd modifier (named super in opentui/kitty protocol, bit 8) cannot be intercepted in opentui when running inside a regular terminal. because parent terminal app will not forward it. instead use alt or ctrl. however, in termcast standalone apps (built with `termcast app build`), wezterm is configured to forward cmd+key via SendKey, so super modifier events DO arrive in opentui.
 
 enter key is named return in opentui. alt is option.
 
