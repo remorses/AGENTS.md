@@ -1,42 +1,51 @@
-# writing changelogs
+# changesets
 
-after you make a change that is noteworthy, add an entry in the CHANGELOG.md file in the root of the package. there are 2 kinds of packages, public and private packages. private packages have a private: true field in package.json, public packages do not and instead have a version field in package.json. public packages are the ones that are published to npm.
+After completing a fix or feature for a **public package** (has `version` in package.json, not `private: true`), add a changeset file in `.changeset/` at the repo root. Never edit CHANGELOG.md directly; it is generated automatically at publish time when changesets are consumed.
 
-If the current package has a version field and it is not private then include the version in the changelog too like in the examples, otherwise use the current date and time.
+Never run the `changeset` CLI command interactively. Always create the file manually.
 
-If you use the version you MUST use a bumped version compared to the current package.json version, and you should update the package.json version field to that version. But do not publish. I will handle that myself.
-
-to write a changelog.md file for a public package, use the following format, add a heading with the new version and a bullet list of your changes, like this:
+Create a `.md` file with a random kebab-case name (e.g. `cool-lions-dance.md`):
 
 ```md
-## 0.1.3
+---
+'package-name': patch
+---
 
-### Patch Changes
-
-- bug fixes
-
-## 0.1.2
-
-### Patch Changes
-
-- add support for githubPath
+Description of what changed, with code examples if applicable.
 ```
 
-for private packages, which do not have versions, you must instead use the current date and time, for example:
+Multiple packages can be listed in one changeset:
 
 ```md
-# Changelog
+---
+'spiceflow': minor
+'create-spiceflow': patch
+---
 
-## 2025-01-24 19:50
-
-- Added a feature to improve user experience
-- Fixed a bug that caused the app to crash on startup
+Add federation support for remote RSC components.
 ```
 
-these are just examples. be clear and concise in your changelog entries.
+## rules
 
-use present tense. be detailed but concise, omit useless verbs like "implement", "added", just put the subject there instead, so it is shorter. it's implicit we are adding features or fixes. do not use nested bullet points. always show example code snippets if applicable, and use proper markdown formatting.
+- **Never use `major`.** Use `patch` for fixes and `minor` for new features.
+- **Never edit CHANGELOG.md directly.** It is generated from changesets at publish time.
+- **Never bump `package.json` version manually.** Versions are bumped automatically.
+- **Never run the changeset CLI.** Write the `.md` file yourself.
+- **Only public packages.** Skip changesets for packages marked `private: true` or without a `version` field.
+- **Present tense.** Write "add support for X", "fix bug with Y".
+- **One changeset per logical change.** Two unrelated changes get two files.
 
-```
+## rich content
 
-the website package has a dependency on docs-website. instead of duplicating code that is needed both in website and docs-website keep a file in docs-website instead and import from there for the website package.
+Changeset descriptions become the public changelog. Write them as rich content aimed at end users:
+
+- Code examples showing new APIs or changed behavior
+- Migration steps if the user needs to update their code
+- Diagrams explaining architecture changes
+- Before/after comparisons
+
+## private packages
+
+For **private packages** (`private: true`, no version), skip changesets entirely. These do not get published.
+
+Load the `changesets` skill for full workflow details.
