@@ -1,6 +1,6 @@
 # spiceflow
 
-before writing or updating spiceflow related code always execute this command to get Spiceflow full documentation: `curl -s https://gitchamber.com/repos/remorses/spiceflow/main/files/README.md`
+before writing or updating spiceflow related code always load the `spiceflow` skill to get the latest docs and API reference.
 
 spiceflow is an API library similar to hono, it allows you to write api servers using whatwg requests and responses
 
@@ -35,16 +35,4 @@ this url returns a single long documentation that covers your use case. always f
 
 usually you can just import the App type from the server workspace to create the client with createSpiceflowClient
 
-if you want to use the spiceflow client in a published package instead we will use the pattern of generating .d.ts and copying these in the workspace package, this way the package does not need to depend on unpublished private server package.
-
-example:
-
-```json
-{
-  "scripts": {
-    "gen-client": "export DIR=../plugin-mcp/src/generated/ && cd ../website && tsc --incremental && cd ../plugin-mcp && rm -rf $DIR && mkdir -p $DIR && cp ../website/dist/src/lib/api-client.* $DIR"
-  }
-}
-```
-
-notice that if you add a route in the spiceflow server you will need to run `pnpm --filter website gen-client` to update the apiClient inside cli.
+if you want to use the spiceflow client in a published package instead you can generate .d.ts files from the server and copy them into the workspace package, so the package does not need to depend on an unpublished private server package.
